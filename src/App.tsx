@@ -8,13 +8,14 @@ import {
   Link
 } from "react-router-dom";
 import List from './render/List';
+import FlexDemo from './flex/index'
 
 function App() {
   return (
     <Router>
       <div>
          
-        <Link to="/">Home</Link>    <Link to="/render">重绘测试</Link>   <Link to="/users">Users</Link>
+        <Link to="/">Home</Link>    <Link to="/render">重绘测试</Link>   <Link to="/flex">flex</Link>
             
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
@@ -22,7 +23,9 @@ function App() {
           <Route path="/render">
             <List />
           </Route>
-         
+          <Route path="/flex">
+            <FlexDemo />
+          </Route>
           <Route path="/">
             <Home />
           </Route>
