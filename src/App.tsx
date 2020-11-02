@@ -9,25 +9,30 @@ import {
 } from "react-router-dom";
 import List from './render/List';
 import FlexDemo from './flex/index'
+import FloatDemo from "./css/FloatDemo";
 
 function App() {
   return (
     <Router>
       <div>
-         
-        <Link to="/">Home</Link>    <Link to="/render">重绘测试</Link>   <Link to="/flex">flex</Link>
-            
+
+        <Link to="/">Home</Link> | <Link to="/render">重绘测试</Link> | <Link to="/flex">flex</Link>|
+        <Link to="/css-float">css-float</Link>
+
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/render">
-            <List />
+            <List/>
           </Route>
           <Route path="/flex">
-            <FlexDemo />
+            <FlexDemo/>
+          </Route>
+          <Route path="/css-float">
+            <FloatDemo/>
           </Route>
           <Route path="/">
-            <Home />
+            <Home/>
           </Route>
         </Switch>
       </div>
